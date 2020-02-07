@@ -16,6 +16,11 @@ const server = http.createServer((req, res) => {
    res.end('Hello World\n');
 });
 
+var wiki = require('./wiki.js');
+// ...
+app.use('/wiki', wiki);
+
+
 var square = require('./square.js'); // Here we require() the name of the file without the (optional) .js file extension
 console.log('The area of a square with a width of 4 is ' + square.area(4));
 
